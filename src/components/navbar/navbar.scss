@@ -1,15 +1,16 @@
 .navbar{
-  height: 100px;
+  height: 0px;
 
   .wrapper{
     max-width: 1366px;
-     margin: 50px;
+    margin: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
 
     .name{
+      margin: 50px;
       font-weight: bold;
       font-size: 30px;
     }
