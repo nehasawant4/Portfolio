@@ -1,15 +1,27 @@
 import "./app.scss"
 import Navbar from "./components/navbar/Navbar.jsx";
+import About from "./components/about/About.jsx";
+import Parallax from "./components/parallax/Parallax";
+import Work from "./components/Work/Work.jsx";
+import Projects from "./components/projects/Projects.jsx";
+import Contact from "./components/contact/Contact.jsx";
 
 const App = () => {
-    return <div>
-        <section id="About">
-            <Navbar></Navbar>
-        </section>
-        <section id="Projects"> <Navbar></Navbar>Projects</section>
-        <section id="Resume"> <Navbar></Navbar>Resume</section>
-        <section id="Contact"> <Navbar></Navbar>Contact</section>
-    </div>;
+    return(
+        <div>
+            <section id="Home">
+                <Navbar />
+                <About />
+            </section>
+            <section>
+                <Work />
+            </section>
+            <Projects/>
+            <section id="Contact">
+                <Contact/>
+            </section>
+        </div>
+    );
 };
 
 export default App;

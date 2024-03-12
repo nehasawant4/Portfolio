@@ -1,0 +1,41 @@
+@import "../../app.scss";
+
+.about {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  position: relative;
+
+  .wrapper{
+    max-width: 1366px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 100px;
+
+    .imageContainer {
+      height: 100%;
+      display: flex;
+
+      @include mobile{
+        height: 60%;
+      }
+    }
+
+    .slidingText{
+      position: absolute;
+      font-size: 20vh;
+      white-space: nowrap;
+      color: #B185A733;
+      width: 40%;
+      z-index: -1;
+      @include mobile{
+        font-size: 10vh;
+        bottom: 90px;
+      }
+    }
+  }
+}
+
+
