@@ -22,7 +22,7 @@ const About = () => {
                     Full Stack | UI/UX Design | Mobile App | Frontend
                 </motion.div>
                 <div className="imageContainer">
-                    <img src="/neha.jpg" alt=""/>
+                    <img src="/neha.png" alt=""/>
                 </div>
             </div>
         </div>
