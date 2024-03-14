@@ -26,7 +26,7 @@ const itemVariants= {
     },
 }
 
-const items = ["About", "Projects", "Contact",];
+const items = ["About", "Work", "Projects", "Contact",];
 
 const Links = () => {
     return(
