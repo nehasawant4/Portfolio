@@ -9,17 +9,12 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    position: relative;
 
     .imageContainer {
-      height: 90%;
+      height: 85%;
       display: flex;
-      position: relative;
+      position: absolute;
 
-      @include mobile{
-        height: 60%;
-      }
     }
 
     .slidingText{
@@ -31,10 +26,6 @@
       z-index: -1;
       top: 30%;
 
-      @include mobile{
-        font-size: 10vh;
-        bottom: 90px;
-      }
     }
   }
 }

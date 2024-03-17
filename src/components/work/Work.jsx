@@ -27,56 +27,53 @@ const experiences = [
         title: "Software Engineer",
         company_name: "Siemens",
         icon: './siemens.png',
-        iconBg: "#383E56",
+        iconBg: "#fff",
         date: "March 2023 - July 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Part of a 12-member Test Automation team for Communications Based Train Control System (CBTC) by Siemens Mobility. ",
+            "Developed over 20 Perl automation scripts for comprehensively testing wayside and onboard equipment of CBTC System.",
+            "Conducted coverage analysis maintaining over 80% code coverage, documented traceability matrix and release notes.",
+            "Troubleshot and verified bugs in CBTC simulator. Conducted reviews of team members' test scripts.",
         ],
     },
     {
         title: "Senior Software Engineer",
         company_name: "Persistent Systems",
         icon: './persistent.png',
-        iconBg: "#E6DEDD",
+        iconBg: "#fff",
         date: "Nov 2020 - Jan 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Part of a 5-member cross-functional QA team for testing Rovius Cloud Platform (RCP) powered by Apache CloudStack.",
+            "Created Docker containers and exhaustively tested cloud deployment in Kubernetes clusters.",
+            "Executed performance testing within RCP simulator hosting more than 30,000 VMs and discovered a 90% increase in API response time after modifications in database and APIs.",
+            "Collaborated with DevOps team to add RCP support on Ubuntu Linux and improved the CI/CD pipeline.",
+            "Maintained and enhanced automation framework built on Jenkins decreasing 40% test failures due to framework issues.",
         ],
     },
 ];
-
-const ExperienceCard =({experience}) => (
+const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
-        contentStyle={{background: "#1d1836", color:"#fff"}}
-        contentArrowStyle={{borderRight:'7px solid #232631'}}
-        date ={experience.date}
-        iconStyle={{background:experience.iconBg}}
-        icon= {
-            <div className='flex justify-center items-center w-full h-full'>
-                <img src={experience.icon} alt={experience.company_name}
-                    className='w-[10px] h-[10px] object-contain'
-                />
+        className="work__experience-card"
+        contentStyle={{ background: "#B185A733", color: "" }}
+        contentArrowStyle={{ borderRight: '7px solid #B185A733' }}
+        date={experience.date}
+        iconStyle={{ background: experience.iconBg }}
+        icon={
+            <div className="work__image-container">
+                <img src={experience.icon} alt={experience.company_name} className="work__image" />
             </div>
         }
     >
         <div>
-            <h3 className='text-white text-[24px] font-bold'>
-                {experience.title}</h3>
-            <p className='text-secondary text-[16px] font-semibold'
-               style={{margin:0}}>{experience.company_name}</p>
+            <h3 className="work__title">{experience.title}</h3>
+            <p className="work__jobdesc">{experience.company_name}</p>
         </div>
 
-        <ul className='mt-5 list-disc ml-5 space-y-2'>
-            {experience.points.map((point,index) =>(
+        <ul className='work__list'>
+            {experience.points.map((point, index) => (
                 <li
                     key={`experience-point-${index}`}
-                    className='text-white-100 text-[14px] pl-1 tracking-wider'
+                    className='work__list-item'
                 >
                     {point}
                 </li>
@@ -85,7 +82,6 @@ const ExperienceCard =({experience}) => (
     </VerticalTimelineElement>
 );
 
-
 const Work = () => {
     return (
         <>
@@ -93,10 +89,10 @@ const Work = () => {
                 <h2>Experience</h2>
             </motion.div>
 
-            <div className='mt-20 flex flex-col'>
+            <div className='work mt-20'>
                 <VerticalTimeline>
-                    {experiences.map((experience,index) =>(
-                        <ExperienceCard key={index} experience={experience}/>
+                    {experiences.map((experience, index) => (
+                        <ExperienceCard key={index} experience={experience} />
                     ))}
                 </VerticalTimeline>
             </div>

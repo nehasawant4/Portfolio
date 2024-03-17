@@ -17,9 +17,6 @@
     width: 400px;
     background: #b185a7;
 
-    @include mobile{
-      width: 200px;
-    }
 
     .links{
       position: absolute;
@@ -34,9 +31,6 @@
 
       a{
         font-size: 40px;
-        @include mobile{
-          font-size: 30px;
-        }
       }
     }
   }
