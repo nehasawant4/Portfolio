@@ -19,7 +19,7 @@ const About = () => {
         <div className="about">
             <div className="wrapper">
                 <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate">
-                    Machine Learning | Cloud Computing | Full-Stack Development
+                    Machine Learning | Cloud Computing | Full-Stack Development | UI/UX Design
                 </motion.div>
                 <div className="imageContainer">
                     <img src="/neha.png" alt=""/>
