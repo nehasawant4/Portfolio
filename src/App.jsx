@@ -9,7 +9,7 @@ import Contact from "./components/contact/Contact.jsx";
 const App = () => {
     return(
         <div>
-            <section id="Home">
+            <section id="About">
                 <Navbar />
                 <About />
             </section>
