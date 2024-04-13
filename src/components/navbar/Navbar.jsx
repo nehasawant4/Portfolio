@@ -19,7 +19,6 @@ const Navbar = () => {
                 <div className="info">
                     <a href="#About">About</a>
                     <a href="#Work">Work</a>
-                    <a href="#Projects">Projects</a>
                     <a href="#Contact">Contact</a>
                 </div>
             </div>
