@@ -27,14 +27,14 @@ const items = [
     {
         id:4,
         title: 'Flutter: Bilingual Math App',
-        img:'https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&w=800',
+        img:'https://img.freepik.com/free-photo/top-view-copy-space-rubbers-rulers_23-2148416145.jpg?w=2000&t=st=1713722476~exp=1713723076~hmac=ebe7bb880eed65f196454c6806bdcbd04f5dd7d6ba4478feda33e03daca0a4ba',
         desc:'A mobile app for iOS/Android designed meticulously in Figma and developed using Flutter and Firebase, intended to interactively teach mathematics, assisting Hispanic children to overcome language barriers. Features include quizzes, games, flashcards, text-to-speech, streak calendar, etc.',
         link:'https://github.com/nehasawant4/Bilingual-Maths-Flutter-App',
     },
     {
         id:5,
         title: 'AWS: PPE Detection System',
-        img:'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        img:'https://galliot.us/wp-content/uploads/2022/10/Face-Mask-Detection-by-Neuralet-part-2.png',
         desc:'Developed a Java web application integrated with AWS for detection of Personal Protective Equipment and monitoring its compliance on custom building premises. Used Amazon Rekognition for detection of PPE in images. Additionally used services like Amazon S3, DynamoDB, etc.',
         link:'https://github.com/nehasawant4/PPE-Detection-AWS-App',
     },
