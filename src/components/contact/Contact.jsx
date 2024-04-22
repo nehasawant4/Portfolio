@@ -1,4 +1,5 @@
 import "./contact.scss"
+import {motion} from "framer-motion";
 
 const Contact = () => {
     return(
@@ -20,10 +21,10 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="social">
-                    <a href="mailto:nsawant@scu.edu"><img src="/gmail.png" alt=""/></a>
-                    <a href="https://www.linkedin.com/in/nehasawant4/"><img src="/linkedin.png" alt=""/></a>
-                    <a href="https://github.com/nehasawant4"><img src="/github.png" alt=""/></a>
-                    <a href="https://www.instagram.com/art_birt/"><img src="/instagram.png" alt=""/></a>
+                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="mailto:nsawant@scu.edu"><img src="/gmail.png" alt=""/></motion.a>
+                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://www.linkedin.com/in/nehasawant4/"><img src="/linkedin.png" alt=""/></motion.a>
+                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://github.com/nehasawant4"><img src="/github.png" alt=""/></motion.a>
+                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://www.instagram.com/art_birt/"><img src="/instagram.png" alt=""/></motion.a>
                 </div>
             </div>
         </div>
