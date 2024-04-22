@@ -26,16 +26,24 @@ const itemVariants= {
     },
 }
 
-const items = ["About", "Work", "Contact",];
+const items = ["About", "Work", "Resume", "Contact",];
 
 const Links = () => {
     return(
         <motion.div className="links" variants={variants}>
-            {items.map(item=>(
-                <motion.a href={`#${item}`} key={item} variants={itemVariants} whileHover={{scale:1.5}} whileTap={{scale:0.95}}>
-                    {item}
-                </motion.a>
-            ))}
+            {items.map(item => {
+                const href = item === "Resume" ? "/Resume.pdf" : `#${item}`;
+                return (
+                    <motion.a
+                        href={href}
+                        key={item}
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.5 }}
+                        whileTap={{ scale: 0.95 }}>
+                        {item}
+                    </motion.a>
+                );
+            })}
         </motion.div>
     );
 };

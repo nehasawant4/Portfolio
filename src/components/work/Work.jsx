@@ -14,9 +14,10 @@ export const textVariant = (delay) => {
             y: 0,
             opacity: 1,
             transition: {
-                type: "spring",
-                duration: 1.25,
+                type: "tween",
+                duration: 2,
                 delay: delay,
+                ease: "easeInOut"
             },
         },
     };
@@ -51,6 +52,7 @@ const experiences = [
         ],
     },
 ];
+
 const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
         className="work__experience-card"
@@ -85,8 +87,8 @@ const ExperienceCard = ({ experience }) => (
 const Work = () => {
     return (
         <>
-            <motion.div variants={textVariant()}>
-                <h2>Experience</h2>
+            <motion.div className="title" variants={textVariant()}>
+                <h1>Experience</h1>
             </motion.div>
 
             <div className='work mt-20'>
