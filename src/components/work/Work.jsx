@@ -32,8 +32,8 @@ const experiences = [
         date: "March 2023 - July 2023",
         points: [
             "Part of a 12-member Test Automation team for Communications Based Train Control System (CBTC) by Siemens Mobility. ",
-            "Developed over 20 Perl automation scripts for comprehensively testing wayside and onboard equipment of CBTC System.",
-            "Conducted coverage analysis maintaining over 80% code coverage, documented traceability matrix and release notes.",
+            "Developed Perl automation scripts for comprehensively testing wayside and onboard equipment of CBTC System.",
+            "Performed code reviews, conducted test coverage analysis maintaining over 90% coverage, documented traceability, and release notes.",
         ],
     },
     {
@@ -43,12 +43,15 @@ const experiences = [
         iconBg: "#fff",
         date: "Nov 2020 - Jan 2023",
         points: [
-            "Part of a 5-member cross-functional QA team for testing Rovius Cloud Platform (RCP) powered by Apache CloudStack.",
-            "Performed exhaustive testing of RCP Cloud Infrastructure with KVM, VMware, and Citrix XenServer hypervisors",
-            "Created Docker containers and exhaustively tested cloud deployment in Kubernetes clusters.",
-            "Executed performance testing within RCP simulator hosting more than 30,000 VMs and discovered a 90% increase in API response time after modifications in database and APIs.",
-            "Collaborated with DevOps team to add RCP support on Ubuntu Linux and improved the CI/CD pipeline.",
-            "Maintained and enhanced automation framework built on Jenkins decreasing 40% test failures due to framework issues.",
+            "Engineered Python scripts for integration and functional testing of Rovius Cloud Platform powered by Apache CloudStack.",
+"Designed test strategies and executed testing for Virtual Machines, Networking, Storage, KVM Agent, VMware, XenServer, etc.",
+"Developed Shell scripts for automating the IaaS management server installation and configuration, reducing manual efforts by 85%.",
+"Enhanced automation framework on Jenkins and fixed test scripts on GitLab decreasing 90% test failures due to framework issues.",
+"Led regular Build Verification Tests and Regression tests, troubleshooting critical issues, which reduced post-release defects.",
+"Deployed Docker containers on Linux VMs and exhaustively tested Kubernetes cluster deployment in CloudStack.",
+"Designed and developed scripts for bulk operations on CloudStack for performance testing. Executed performance tests on Cloud Platform, consolidated and visualized results showing API response time, CPU, and memory usage, etc.",
+"Assisted migration of CI/CD infrastructure to new servers, including network reconfiguration and script enhancements in CI/CD pipeline.",
+"Mentored Junior Engineers on Cloud Infrastructure concepts, Automation, KVM virtualization, and Kubernetes."
         ],
     },
 ];

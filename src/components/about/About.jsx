@@ -22,7 +22,7 @@ const About = () => {
                     Machine Learning | Cloud Computing | Full-Stack Development | UI/UX Design
                 </motion.div>
                 <div className="imageContainer">
-                    <img src="/neha.png" alt=""/>
+                    <img src="/neha.png" alt="" height="750"/>
                 </div>
             </div>
         </div>
