@@ -9,7 +9,7 @@ const Contact = () => {
                     <h1>Let's Connect!</h1>
                     <div className="item">
                         <h2>Mail</h2>
-                        <span>nsawant@scu.edu</span>
+                        <span>nehasawant4@gmail.com</span>
                     </div>
                     <div className="item">
                         <h2>Phone</h2>
@@ -21,7 +21,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="social">
-                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="mailto:nsawant@scu.edu"><img src="/gmail.png" alt=""/></motion.a>
+                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="mailto:nehasawant4@gmail.com"><img src="/gmail.png" alt=""/></motion.a>
                     <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://www.linkedin.com/in/nehasawant4/"><img src="/linkedin.png" alt=""/></motion.a>
                     <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://github.com/nehasawant4"><img src="/github.png" alt=""/></motion.a>
                     <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://www.instagram.com/art_birt/"><img src="/instagram.png" alt=""/></motion.a>

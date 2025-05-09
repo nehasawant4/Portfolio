@@ -8,8 +8,9 @@
     top: 0;
     left: 0;
     padding-top: 30px;
+    padding-bottom: 10px;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
 
     @include mobile{
       top: 15px;
@@ -17,6 +18,7 @@
     }
 
     .progressBar{
+      margin-top: 10px;
       height: 6px;
       background-color: white;
 
@@ -107,3 +109,4 @@
     }
   }
 }
+
