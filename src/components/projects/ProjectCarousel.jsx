@@ -1,4 +1,4 @@
-import "./projectCarousel.scss";
+import "./projectcarousel.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel } from "swiper/modules";
 import "swiper/css";
