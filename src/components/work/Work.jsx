@@ -28,7 +28,7 @@ export const textVariant = (delay) => {
 const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
         className="work__experience-card"
-        contentStyle={{ background: "#B185A733", color: "" }}
+        contentStyle={{ background: "black", color: "" }}
         contentArrowStyle={{ borderRight: '7px solid #B185A733' }}
         date={experience.date}
         iconStyle={{ background: experience.iconBg }}
@@ -59,9 +59,7 @@ const ExperienceCard = ({ experience }) => (
 const Work = () => {
     return (
         <>
-            <motion.div className="title" variants={textVariant()}>
-                <h1>Experience</h1>
-            </motion.div>
+                <h1 className='work-title'>Experience</h1>
 
             <div className='work mt-20'>
                 <VerticalTimeline>

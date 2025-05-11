@@ -18,9 +18,9 @@ const About = () => {
     return(
         <div className="about">
             <div className="wrapper">
-                <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate">
+                {/* <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate">
                     Machine Learning | Cloud Computing | Full-Stack Development | UI/UX Design
-                </motion.div>
+                </motion.div> */}
                 <div className="imageContainer">
                     <img src="/neha.png" alt="" height="750"/>
                 </div>

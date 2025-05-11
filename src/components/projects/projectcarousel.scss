@@ -1,0 +1,98 @@
+.project-title {
+  text-align: left;
+  font-size: 54px;
+  margin-left: 40px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  padding: 4rem 2rem;
+  overscroll-behavior-x: contain;
+  
+  .swiper {
+    padding-bottom: 2rem;
+    overflow: visible;
+    
+    .swiper-slide {
+      width: auto;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .card {
+    position: relative;
+    height: 500px;
+    min-width: 300px;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    .overlay {
+      z-index: 1;
+      pointer-events: none;
+
+      .category {
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        opacity: 0.8;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: 1rem;
+        opacity: 0.85;
+      }
+    }
+
+    .plus {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.85);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      z-index: 2;
+
+      &:hover {
+        background: white;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 2rem 1rem;
+    
+    .card {
+      height: 400px;
+      min-width: 250px;
+    }
+  }
+}

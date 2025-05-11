@@ -1,10 +1,9 @@
 import "./app.scss"
 import Navbar from "./components/navbar/Navbar.jsx";
 import About from "./components/about/About.jsx";
-import Parallax from "./components/parallax/Parallax";
 import Work from "./components/work/Work.jsx";
-import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
+import ProjectCarousel from "./components/projects/ProjectCarousel.jsx";
 
 const App = () => {
     return(
@@ -17,7 +16,7 @@ const App = () => {
                 <Work />
             </section>
             <section id="Projects">
-                <Projects/>
+                <ProjectCarousel/>
             </section>
             <section id="Contact">
                 <Contact/>

@@ -13,7 +13,7 @@ const itemVariants= {
     },
 }
 
-const items = ["About", "Work", "Resume", "Contact",];
+const items = ["About", "Work", "Projects", "Resume", "Contact",];
 
 const Navbar = () => {
     return(
