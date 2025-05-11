@@ -8,8 +8,8 @@ import ProjectCarousel from "./components/projects/ProjectCarousel.jsx";
 const App = () => {
     return(
         <div>
+            <Navbar />
             <section id="About">
-                <Navbar />
                 <About />
             </section>
             <section id="Work">

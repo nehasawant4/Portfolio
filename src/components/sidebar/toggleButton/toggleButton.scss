@@ -1,5 +1,7 @@
-.toggleButton {
-  position: absolute;
-  top: 15px;
-  left: 15px;
+
+
+@media (min-width: 695px) {
+  .toggleButton {
+      display: none; // Hide the toggle button on wider screens
+  }
 }
