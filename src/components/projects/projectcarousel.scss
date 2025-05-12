@@ -6,11 +6,10 @@
 
 .carousel-wrapper {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 32px 32px;
   overscroll-behavior-x: contain;
   
   .swiper {
-    padding-bottom: 2rem;
     overflow: visible;
     
     .swiper-slide {

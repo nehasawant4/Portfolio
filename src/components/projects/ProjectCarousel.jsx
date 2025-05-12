@@ -1,8 +1,7 @@
 import "./projectcarousel.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Mousewheel } from "swiper/modules";
+import { Mousewheel } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import { items } from "../projects/project-constants";
 
 const ProjectCarousel = () => {
@@ -11,8 +10,7 @@ const ProjectCarousel = () => {
     <h1 className="project-title">Projects</h1>
     <div className="carousel-wrapper">
       <Swiper
-        modules={[Navigation, Mousewheel]}
-        navigation
+        modules={[Mousewheel]}
         mousewheel
         direction="horizontal"
         slidesPerView="auto"
