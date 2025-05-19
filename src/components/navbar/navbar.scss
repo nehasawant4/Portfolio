@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@use "../../app.scss" as *;
 
 .navbar{
   position: fixed; 
@@ -71,5 +71,10 @@
       }
     }
   }
+}
+
+// Hide navbar wrapper when popup is open
+body.popup-open .navbar .wrapper {
+  display: none;
 }
 

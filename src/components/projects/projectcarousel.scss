@@ -95,3 +95,279 @@
     }
   }
 }
+
+// Project Popup Styles
+.project-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+}
+
+.project-popup {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
+  background-color: white;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  color: #333;
+  animation: slideUp 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.popup-header {
+  padding: 40px 40px 20px;
+  
+  h2 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+  
+  .popup-tech {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
+}
+
+.popup-content {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  
+  .popup-image {
+    width: 100%;
+    max-height: 50vh;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+  
+  .popup-description {
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.popup-footer {
+  padding: 20px 40px 40px;
+  display: flex;
+  justify-content: flex-start;
+  
+  .view-project-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0071e3;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+    
+    &:hover {
+      background-color: #0062c4;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive adjustments for popup
+@media (min-width: 768px) {
+  .popup-content {
+    flex-direction: row;
+    gap: 40px;
+    
+    .popup-image {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    
+    .popup-description {
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .project-popup-overlay {
+    padding: 10px;
+  }
+
+  .project-popup {
+    width: 100%;
+    max-width: none;
+    height: 85vh;
+  }
+  
+  .popup-header {
+    padding: 30px 20px 15px;
+    
+    h2 {
+      font-size: 28px;
+    }
+  }
+  
+  .popup-content {
+    padding: 0 20px;
+  }
+  
+  .popup-footer {
+    padding: 15px 20px 30px;
+  }
+}
+
+// Custom content styles
+.custom-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  
+  .popup-video {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    video {
+      display: block;
+    }
+  }
+  
+  .popup-youtube {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  
+  .popup-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    
+    .gallery-item {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      
+      &:hover {
+        transform: translateY(-5px);
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+  
+  .popup-stats {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments for custom content
+@media (min-width: 768px) {
+  .custom-content {
+    .popup-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+}

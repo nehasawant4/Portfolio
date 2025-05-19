@@ -6,6 +6,15 @@ export const items = [
         img:'traffic.jpeg',
         desc:'Built CNN models using Sequential and VGG19 architectures, achieving 98% accuracy in classifying traffic signs using both approaches.\nThe primary objective is to enhance road safety by automating the recognition of traffic signs.\nThis capability is crucial for the development of Autonomous Vehicles and Advanced Driver Assistance System.',
         link:'https://github.com/nehasawant4/Traffic-Sign-Recognition-CNN/blob/main/TrafficSignRecognition.ipynb',
+        customContent: {
+            type: 'youtube',
+            videoId: 'VhoRyLixsBQ',
+            stats: {
+                accuracy: '98%',
+                dataset: 'German Traffic Sign Recognition Benchmark',
+                modelSize: '15MB'
+            }
+        }
     },
     {
         id:2,
