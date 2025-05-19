@@ -5,19 +5,25 @@
   overflow: hidden;
   position: relative;
 
-  .wrapper{
+  .wrapper {
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .imageContainer {
-      height: 85%;
+      height: 65%;
       display: flex;
-      position: absolute;
+      align-items: center;
+      justify-content: center;
 
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
     }
 
-    .slidingText{
+    .slidingText {
       position: absolute;
       font-size: 18vh;
       white-space: nowrap;
@@ -25,7 +31,6 @@
       width: 40%;
       z-index: -1;
       top: 30%;
-
     }
   }
 }

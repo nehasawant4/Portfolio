@@ -176,7 +176,7 @@ const ProjectCarousel = () => {
               slidesPerView: 3.3,
             },
             1920: {
-              slidesPerView: 4.3,
+              slidesPerView: 3,
             },
           }}
         >
