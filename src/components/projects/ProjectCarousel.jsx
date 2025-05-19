@@ -19,7 +19,7 @@ const YouTubeVideo = ({ videoId }) => (
     <iframe 
       width="100%" 
       height="315" 
-      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+      src={`https://www.youtube.com/embed/${videoId}?rel=0`}
       title="YouTube video player" 
       frameBorder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -55,8 +55,15 @@ const ProjectPopup = ({ project, onClose }) => {
   // Determine if the project has custom content
   const hasCustomContent = project.customContent !== undefined;
   
+  const handleOverlayClick = (e) => {
+    // Only close if the click was directly on the overlay
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+  
   return (
-    <div className="project-popup-overlay">
+    <div className="project-popup-overlay" onClick={handleOverlayClick}>
       <div className="project-popup">
         <button className="close-button" onClick={onClose}>×</button>
         
@@ -88,17 +95,18 @@ const ProjectPopup = ({ project, onClose }) => {
                 <VideoContent videoUrl={project.customContent.videoUrl} />
               )}
               
-              {/* If the project has a YouTube video */}
-              {project.customContent.type === 'youtube' && (
-                <YouTubeVideo videoId={project.customContent.videoId} />
-              )}
-              
               <div className="popup-description">
                 {project.desc.split('\n').map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
+
+              {/* If the project has a YouTube video */}
+              {project.customContent.type === 'youtube' && (
+                <YouTubeVideo videoId={project.customContent.videoId} />
+              )}
               
+
               {/* If the project has additional images */}
               {project.customContent.additionalImages && (
                 <ImageGallery images={project.customContent.additionalImages} />
@@ -113,9 +121,14 @@ const ProjectPopup = ({ project, onClose }) => {
         </div>
         
         <div className="popup-footer">
-          <a href={project.link} target="_blank" rel="noopener noreferrer" className="view-project-btn">
-            View Project
-          </a>
+          <button className="view-project-btn" onClick={() => window.open(project.github)}>
+            Github
+          </button>
+          {project.link && (
+            <button className="view-project-btn" onClick={() => window.open(project.link)}>
+              Live Demo
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -180,7 +193,7 @@ const ProjectCarousel = () => {
                 </div>
                 <button className="plus" onClick={(e) => {
                   e.stopPropagation(); // Prevent opening popup
-                  window.open(proj.link, "_blank");
+                  window.open(proj.link);
                 }}>+</button>
               </div>
             </SwiperSlide>

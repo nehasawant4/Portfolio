@@ -4,16 +4,12 @@ export const items = [
         title: 'RAG Assist',
         tech: 'React · FastAPI · LangChain · OpenAI API · Pinecone',
         img:'RAGAssist.png',
-        desc:'Built CNN models using Sequential and VGG19 architectures, achieving 98% accuracy in classifying traffic signs using both approaches.\nThe primary objective is to enhance road safety by automating the recognition of traffic signs.\nThis capability is crucial for the development of Autonomous Vehicles and Advanced Driver Assistance System.',
-        link:'https://github.com/nehasawant4/Traffic-Sign-Recognition-CNN/blob/main/TrafficSignRecognition.ipynb',
+        desc:'In most organizations, Confluence is the backbone of internal documentation — from API guides and onboarding manuals to product specs and test plans. Developers, testers, and team members rely on it daily, yet finding the right information or understanding outdated docs is a major pain point.\n\nThis app transforms documentation into a queryable, intelligent assistant.\n\n🔍 Ask questions about platform usage, UI flows, or how to construct API payloads — the AI retrieves the exact context from Confluence or GitHub.\n\n🔧 Integrate GitHub repos to query codebases directly and understand internal APIs, handlers, or utils without reading every file.\n\n📑 Bridge the gap between code and docs — the AI detects undocumented features or mismatched Confluence pages and suggests content updates.\n\nBuilt for developer enablement, QA assistance, and living documentation, this tool doesn\'t just read your docs — it understands them, reasons with them, and keeps them in sync with your code.',
+        github:'https://github.com/nehasawant4/RAG-AgenticAI-Confluence',
+        link:'https://rag-assist.vercel.app/',
         customContent: {
             type: 'youtube',
             videoId: 'VhoRyLixsBQ',
-            stats: {
-                accuracy: '98%',
-                dataset: 'German Traffic Sign Recognition Benchmark',
-                modelSize: '15MB'
-            }
         }
     },
     {
@@ -23,6 +19,7 @@ export const items = [
         img:'https://images.pexels.com/photos/17483874/pexels-photo-17483874/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-by-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-pr.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         desc:'Developed and trained a CNN-based multi-class image classification Deep Learning model using TensorFlow and OpenCV to categorize images into distinct classes.',
         link:'https://github.com/nehasawant4/Image-Classification-Using-CNN',
+        github:'https://github.com/nehasawant4/Image-Classification-Using-CNN',
     },
     {
         id:3,   
@@ -30,7 +27,7 @@ export const items = [
         tech: 'Python, TensorFlow, CNN',
         img:'https://blogimages.softwaresuggest.com/blog/wp-content/uploads/2024/02/09114343/Features-of-Applicant-Tracking-System.jpg',
         desc:'The system is designed to assist the recruitment process providing an efficient solution for employers to screen resumes while empowering job seekers to optimize their resumes boosting their chances of securing a job.',
-        link:'https://github.com/nehasawant4/ATS-GenAI-Google-Gemini',
+        github:'https://github.com/nehasawant4/ATS-GenAI-Google-Gemini',
     },
     {
         id:4,
@@ -39,6 +36,7 @@ export const items = [
         img:'https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=800',
         desc:'A full-stack blog app with responsive UI and interactive UX developed with React, Next.js, CSS, MongoDB, etc. The app supports CRUD operations for blogs and comments, filtering of blogs based on categories and users, pagination, Google OAuth for Google Sign-In, etc.',
         link:'https://github.com/nehasawant4/Blogging-App-React',
+        github:'https://github.com/nehasawant4/Blogging-App-React',
     },
     {
         id:5,
@@ -47,6 +45,7 @@ export const items = [
         img:'https://img.freepik.com/free-photo/top-view-copy-space-rubbers-rulers_23-2148416145.jpg?w=2000&t=st=1713722476~exp=1713723076~hmac=ebe7bb880eed65f196454c6806bdcbd04f5dd7d6ba4478feda33e03daca0a4ba',
         desc:'A mobile app for iOS/Android designed meticulously in Figma and developed using Flutter and Firebase, intended to interactively teach mathematics, assisting Hispanic children to overcome language barriers. Features include quizzes, games, flashcards, text-to-speech, streak calendar, etc.',
         link:'https://github.com/nehasawant4/Bilingual-Maths-Flutter-App',
+        github:'https://github.com/nehasawant4/Bilingual-Maths-Flutter-App',
     },
     {
         id:6,
@@ -55,5 +54,6 @@ export const items = [
         img:'https://galliot.us/wp-content/uploads/2022/10/Face-Mask-Detection-by-Neuralet-part-2.png',
         desc:'Developed a Java web application integrated with AWS for detection of Personal Protective Equipment and monitoring its compliance on custom building premises. Used Amazon Rekognition for detection of PPE in images. Additionally used services like Amazon S3, DynamoDB, etc.',
         link:'https://github.com/nehasawant4/PPE-Detection-AWS-App',
+        github:'https://github.com/nehasawant4/PPE-Detection-AWS-App',
     },
 ];
