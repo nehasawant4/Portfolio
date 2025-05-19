@@ -6,9 +6,10 @@
 }
 
 .work-title {
-  text-align: left;
-  font-size: 54px;
+  text-align: center;
+  font-size: 45px;
   margin-left: 40px;
+  font-weight: 300;
 }
 
 .work {
@@ -35,6 +36,7 @@
 
   &__title {
     font-size: 24px;
+    font-weight: 300;
   }
 
   &__jobdesc {

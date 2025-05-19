@@ -42,7 +42,7 @@ const Links = ({ setOpen }) => {
                         href={href}
                         key={item}
                         variants={itemVariants}
-                        whileHover={{ scale: 1.5 }}
+                        whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={handleLinkClick}>
                         {item}

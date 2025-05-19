@@ -1,9 +1,9 @@
 export const items = [
     {
         id:1,
-        title: 'Traffic Sign Recognition',
-        tech: 'Python, TensorFlow, CNN, VGG19',
-        img:'traffic.jpeg',
+        title: 'RAG Assist',
+        tech: 'React · FastAPI · LangChain · OpenAI API · Pinecone',
+        img:'RAGAssist.png',
         desc:'Built CNN models using Sequential and VGG19 architectures, achieving 98% accuracy in classifying traffic signs using both approaches.\nThe primary objective is to enhance road safety by automating the recognition of traffic signs.\nThis capability is crucial for the development of Autonomous Vehicles and Advanced Driver Assistance System.',
         link:'https://github.com/nehasawant4/Traffic-Sign-Recognition-CNN/blob/main/TrafficSignRecognition.ipynb',
         customContent: {

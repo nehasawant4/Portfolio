@@ -30,18 +30,20 @@
 
     .name{
       color: white;
-      margin: 15px 100px;
-      font-size: 25px;
+      margin: 15px 50px;
+      font-size: 24px;
       z-index: 999; 
+      font-weight: 300;
     }
 
     .info{
       color: white;
       display: flex;
-      gap: 30px;
+      gap: 30px;  
       font-size: 23px;
-      margin: 15px 100px;
+      margin: 15px 50px;
       z-index: 999; 
+      font-weight: 300;
     }
 
     @media (max-width: 976px) {

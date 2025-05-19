@@ -88,7 +88,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="social">
-                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="mailto:nehasawant4@gmail.com">
+                    <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} href="mailto:nehasawant4@gmail.com">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
                             <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: "normal" }}>
                                 <g transform="scale(5.12,5.12)">
@@ -97,7 +97,7 @@ const Contact = () => {
                             </g>
                         </svg>
                     </motion.a>
-                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://www.linkedin.com/in/nehasawant4/">
+                    <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} href="https://www.linkedin.com/in/nehasawant4/">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
                             <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: "normal" }}>
                                 <g transform="scale(5.12,5.12)">
@@ -106,7 +106,7 @@ const Contact = () => {
                             </g>
                         </svg>
                     </motion.a>
-                    <motion.a whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.95 }} href="https://github.com/nehasawant4">
+                    <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} href="https://github.com/nehasawant4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0,0,256,256">
                             <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: "normal" }}>
                                 <g transform="scale(8.53333,8.53333)">

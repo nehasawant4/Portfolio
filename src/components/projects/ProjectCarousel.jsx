@@ -19,7 +19,7 @@ const YouTubeVideo = ({ videoId }) => (
     <iframe 
       width="100%" 
       height="315" 
-      src={`https://www.youtube.com/embed/${videoId}`}
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
       title="YouTube video player" 
       frameBorder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -146,18 +146,24 @@ const ProjectCarousel = () => {
           mousewheel
           direction="horizontal"
           slidesPerView="auto"
-          spaceBetween={30}
+          spaceBetween={20}
           centeredSlides={false}
           grabCursor={true}
           breakpoints={{
-            640: {
-              slidesPerView: 1.2,
+            549: {
+              slidesPerView: 1,
             },
-            768: {
+            600: {
               slidesPerView: 2,
             },
             1024: {
               slidesPerView: 2.5,
+            },
+            1440: {
+              slidesPerView: 3.3,
+            },
+            1920: {
+              slidesPerView: 4.3,
             },
           }}
         >
