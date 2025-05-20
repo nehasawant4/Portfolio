@@ -34,7 +34,9 @@ const ExperienceCard = ({ experience }) => (
         iconStyle={{ background: experience.iconBg }}
         icon={
             <div className="work__image-container">
-                <img src={experience.icon} alt={experience.company_name} className="work__image" />
+                <a href={experience.link} target="_blank" rel="noopener noreferrer">
+                    <img src={experience.icon} alt={experience.company_name} className="work__image" />
+                </a>
             </div>
         }
     >

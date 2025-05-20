@@ -1,9 +1,21 @@
 export const experiences = [
     {
+        title: "Master of Science in Computer Science",
+        company_name: "Santa Clara University",
+        icon: './scu.png',
+        link: "https://www.scu.edu/",
+        iconBg: "#fff",
+        date: "June 2025",
+        points: [
+            "Graduating on 14th June 2025.",
+        ],
+    },
+    {
         title: "Software Engineer Intern",
         company_name: "F5, Inc",
         icon: './f5.png',
         iconBg: "#fff",
+        link: "https://www.f5.com/",
         date: "July 2024 - Sept 2024",
         points: [
             "Built an AI-powered chatbot for F5’s Central Manager using a custom RAG architecture with Azure OpenAI and Postgres vector store, enabling AI Ops, automated workflows, document validation, and developer assistance.",
@@ -13,10 +25,23 @@ export const experiences = [
         ],
     },
     {
+        title: "Master of Science in Computer Science",
+        company_name: "Santa Clara University",
+        icon: './scu.png',
+        iconBg: "#fff",
+        link: "https://www.scu.edu/",
+        date: "Sept 2023",
+        points: [
+            "Started my Masters in Computer Science at Santa Clara University.",
+            "Interesting coursework I studied: Design and Analysis of Algorithms, Distributed Systems, Machine Learning, Advanced Operating Systems, Computer Architecture, Object-Oriented Analysis & Design, Software Engineering",
+        ],
+    },
+    {
         title: "Software Engineer",
         company_name: "Siemens",
         icon: './siemens.png',
         iconBg: "#fff",
+        link: "https://www.siemens.com/",
         date: "March 2023 - July 2023",
         points: [
             "Architected Perl automation scripts based on Functional Test Specification Documents to test wayside and onboard equipment of the Communications Based Train Control (CBTC) System.",
@@ -29,6 +54,7 @@ export const experiences = [
         company_name: "Persistent Systems",
         icon: './persistent.png',
         iconBg: "#fff",
+        link: "https://www.persistent.com/",
         date: "Nov 2020 - Jan 2023",
         points: [
             "Engineered Python scripts for automation testing of Rovius Cloud Platform powered by Apache CloudStack.",

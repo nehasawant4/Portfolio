@@ -9,6 +9,7 @@ const App = () => {
     return(
         <div>
             <Navbar />
+            <div className="scroll-wrapper">
             <section id="About">
                 <About />
             </section>
@@ -21,6 +22,7 @@ const App = () => {
             <section id="Contact">
                 <Contact/>
             </section>
+            </div>            
         </div>
     );
 };

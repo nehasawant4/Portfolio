@@ -23,7 +23,7 @@ export const items = [
     },
     {
         id:3,
-        title: 'Flutter: Bilingual Math App',
+        title: 'Bilingual Math App',
         tech: 'Flutter, Firebase, Figma',
         img:'Fractions.png',
         desc:'A mobile app for iOS/Android designed meticulously in Figma and developed using Flutter and Firebase, intended to interactively teach mathematics, assisting Hispanic children to overcome language barriers. Features include quizzes, games, flashcards, text-to-speech, streak calendar, etc.',
@@ -39,7 +39,7 @@ export const items = [
     },
     {
         id:5,
-        title: 'React: Blogging App',
+        title: 'Blogging App',
         tech: 'React, Next.js, CSS, MongoDB, etc.',
         img:'Blog.png',
         desc:'A full-stack blog app with responsive UI and interactive UX developed with React, Next.js, CSS, MongoDB, etc. The app supports CRUD operations for blogs and comments, filtering of blogs based on categories and users, pagination, Google OAuth for Google Sign-In, etc.',
