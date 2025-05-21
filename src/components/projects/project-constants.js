@@ -27,7 +27,26 @@ export const items = [
         ]
     },
     {
-        id:2,
+        id: 2,
+        title: 'SEO Booster - Adobe Hackathon Winner',
+        tech: 'JavaScript · TailwindCSS · OpenAI API · Adobe Express SDK',
+        img: 'SEO.png',
+        desc: 'Award-winning Adobe Express add-on that provides real-time, AI-driven SEO suggestions to content creators, enabling optimized titles, alt-text, and keyword insights without disrupting the design workflow.',
+        github: 'https://github.com/vorahardik7/seo-add-on-public', 
+        link: 'https://new.express.adobe.com/new?category=addOns&claimCode=w1nhm7ll6%3A721X1CRL', 
+        layout: [
+            { type: 'text', content: '🏆 SEO Booster won Most Entrepreneurial and Best User Value awards at the SCU AI Collaborate Hackathon powered by Adobe Express. \nWe also secured a $3,500 grant from the Adobe Fund for Design to publish our add-on on the Adobe Express Marketplace.' },
+            { type: 'text', content: '🎯 Problem: Designers often overlook SEO, leading to content that looks good but ranks poorly. SEO Booster bridges this gap by offering AI-powered alt-text, metadata, and keyword suggestions.' },
+            { type: 'text', content: '🧠 SEO Booster is an Adobe Express add-on that empowers designers and marketers to improve discoverability with real-time SEO tips powered by OpenAI.' },
+            { type: 'text', content: '⚙️ How It Works:\nDeveloped using Adobe Express SDK, the add-on analyzes canvas elements, takes user input, and sends context to a serverless OpenAI-powered API hosted on Vercel.' },
+            { type: 'text', content: '✨ Key Features:' },
+            { type: 'text', content: '• AI-generated alt-text to boost accessibility and SEO\n• Optimized headlines and meta descriptions\n• Keyword analysis from design text\n• General content and design improvement tips' },
+            { type: 'youtube', videoId: 'LvDOKdr98CI' },
+            
+        ]
+    },    
+    {
+        id:3,
         title: 'Norma - RAG',
         tech: 'React · TypeScript · Python · Flask · Pinecone · FAISS · GPT-4',
         img:'Compliance.png',
@@ -52,7 +71,7 @@ export const items = [
         ]
     },
     {
-        id:3,
+        id:4,
         title: 'Bilingual Math App',
         tech: 'Flutter, Firebase, Figma',
         img:'Fractions.png',
@@ -75,7 +94,7 @@ export const items = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         title: 'Data Structure Visualizer',
         tech: 'JavaFX · MongoDB · MVC · Java 21 · Maven',
         img: 'DataStructures.png',
