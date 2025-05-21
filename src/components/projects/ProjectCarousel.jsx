@@ -19,7 +19,7 @@ const YouTubeVideo = ({ videoId }) => (
     <iframe 
       width="100%" 
       height="315" 
-      src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+      src={`https://www.youtube.com/embed/${videoId}?rel=0&playlist=${videoId}`}
       title="YouTube video player" 
       frameBorder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -30,35 +30,68 @@ const YouTubeVideo = ({ videoId }) => (
 
 const ImageGallery = ({ images }) => (
   <div className="popup-gallery">
-    {images.map((img, index) => (
+    {images.map((item, index) => (
       <div key={index} className="gallery-item">
-        <img src={img} alt={`Project image ${index + 1}`} />
+        {typeof item === 'string' ? (
+          <img src={item} alt={`Project image ${index + 1}`} />
+        ) : (
+          <div className="captioned-image">
+            <div className="image-caption">{item.caption}</div>
+            <div className="image-container">
+              <img src={item.src} alt={item.caption || `Project image ${index + 1}`} />
+            </div>
+          </div>
+        )}
       </div>
     ))}
   </div>
 );
 
-const StatsDisplay = ({ stats }) => (
-  <div className="popup-stats">
-    <h3>Project Statistics</h3>
-    <ul>
-      {Object.entries(stats).map(([key, value]) => (
-        <li key={key}>
-          <strong>{key.charAt(0).toUpperCase() + key.slice(1)}:</strong> {value}
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
 const ProjectPopup = ({ project, onClose }) => {
-  // Determine if the project has custom content
-  const hasCustomContent = project.customContent !== undefined;
+  // Determine if the project has a custom layout
+  const hasCustomLayout = project.layout !== undefined;
   
   const handleOverlayClick = (e) => {
     // Only close if the click was directly on the overlay
     if (e.target === e.currentTarget) {
       onClose();
+    }
+  };
+
+  // Function to render a specific content section based on its type
+  const renderSection = (section, index) => {
+    switch (section.type) {
+      case 'text':
+        return (
+          <div key={index} className="popup-description">
+            {section.content.split('\n').map((paragraph, pIndex) => (
+              <p key={`${index}-${pIndex}`}>{paragraph}</p>
+            ))}
+          </div>
+        );
+      case 'image':
+        return (
+          <div key={index} className="popup-image">
+            {section.caption ? (
+              <div className="captioned-image">
+                <div className="image-caption">{section.caption}</div>
+                <div className="image-container">
+                  <img src={section.src} alt={section.caption || `Project visual ${index}`} />
+                </div>
+              </div>
+            ) : (
+              <img src={section.src} alt={`Project visual ${index}`} />
+            )}
+          </div>
+        );
+      case 'youtube':
+        return <YouTubeVideo key={index} videoId={section.videoId} />;
+      case 'video':
+        return <VideoContent key={index} videoUrl={section.videoUrl} />;
+      case 'gallery':
+        return <ImageGallery key={index} images={section.images} />;
+      default:
+        return null;
     }
   };
   
@@ -73,50 +106,28 @@ const ProjectPopup = ({ project, onClose }) => {
         </div>
         
         <div className="popup-content">
-          {/* Default content display */}
-          {!hasCustomContent && (
-            <>
-              <div className="popup-image">
-                <img src={project.img} alt={project.title} />
-              </div>
-              <div className="popup-description">
-                {project.desc.split('\n').map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
-            </>
-          )}
-          
-          {/* Custom content display */}
-          {hasCustomContent && (
+          {/* Custom layout display */}
+          {hasCustomLayout && (
             <div className="custom-content">
-              {/* If the project has a video */}
-              {project.customContent.type === 'video' && (
-                <VideoContent videoUrl={project.customContent.videoUrl} />
-              )}
-              
+              {project.layout.map((section, index) => renderSection(section, index))}
+            </div>
+          )}
+
+          {/* Default content display (fallback if no custom layout) */}
+          {!hasCustomLayout && (
+            <>
               <div className="popup-description">
                 {project.desc.split('\n').map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
-
-              {/* If the project has a YouTube video */}
-              {project.customContent.type === 'youtube' && (
-                <YouTubeVideo videoId={project.customContent.videoId} />
-              )}
               
-
-              {/* If the project has additional images */}
-              {project.customContent.additionalImages && (
-                <ImageGallery images={project.customContent.additionalImages} />
+              {project.img && (
+                <div className="popup-image">
+                  <img src={project.img} alt={project.title} />
+                </div>
               )}
-              
-              {/* If the project has stats */}
-              {project.customContent.stats && (
-                <StatsDisplay stats={project.customContent.stats} />
-              )}
-            </div>
+            </>
           )}
         </div>
         
