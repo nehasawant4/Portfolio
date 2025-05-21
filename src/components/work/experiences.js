@@ -1,7 +1,7 @@
 export const experiences = [
     {
         title: "Master of Science in Computer Science",
-        company_name: "Santa Clara University",
+        company_name: "SANTA CLARA UNIVERSITY",
         icon: './scu.png',
         link: "https://www.scu.edu/",
         iconBg: "#fff",
@@ -12,7 +12,7 @@ export const experiences = [
     },
     {
         title: "Software Engineer Intern",
-        company_name: "F5, Inc",
+        company_name: "F5, INC",
         icon: './f5.png',
         iconBg: "#fff",
         link: "https://www.f5.com/",
@@ -26,7 +26,7 @@ export const experiences = [
     },
     {
         title: "Master of Science in Computer Science",
-        company_name: "Santa Clara University",
+        company_name: "SANTA CLARA UNIVERSITY",
         icon: './scu.png',
         iconBg: "#fff",
         link: "https://www.scu.edu/",
@@ -38,7 +38,7 @@ export const experiences = [
     },
     {
         title: "Software Engineer",
-        company_name: "Siemens",
+        company_name: "SIEMENS",
         icon: './siemens.png',
         iconBg: "#fff",
         link: "https://www.siemens.com/",
@@ -51,7 +51,7 @@ export const experiences = [
     },
     {
         title: "Senior Software Engineer",
-        company_name: "Persistent Systems",
+        company_name: "PERSISTENT SYSTEMS",
         icon: './persistent.png',
         iconBg: "#fff",
         link: "https://www.persistent.com/",

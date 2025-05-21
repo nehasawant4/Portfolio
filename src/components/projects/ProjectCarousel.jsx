@@ -202,10 +202,6 @@ const ProjectCarousel = () => {
                   <span className="category">{proj.tech}</span>
                   <h3>{proj.title}</h3>
                 </div>
-                <button className="plus" onClick={(e) => {
-                  e.stopPropagation(); // Prevent opening popup
-                  window.open(proj.link);
-                }}>+</button>
               </div>
             </SwiperSlide>
           ))}

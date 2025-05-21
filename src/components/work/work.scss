@@ -60,12 +60,13 @@
   }
 
   &__list {
+    margin-top: 15px;
     list-style-type: disc;
     margin-left: 20px; // Adjusted for proper alignment
     padding: 0;
 
     &-item {
-      font-size: 14px;
+      font-size: 16px;
       padding-left: 1px;
     }
   }
