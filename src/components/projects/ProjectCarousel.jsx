@@ -98,11 +98,10 @@ const ProjectPopup = ({ project, onClose }) => {
   return (
     <div className="project-popup-overlay" onClick={handleOverlayClick}>
       <div className="project-popup">
-        <button className="close-button" onClick={onClose}>×</button>
-        
         <div className="popup-header">
           <h2>{project.title}</h2>
           <p className="popup-tech">{project.tech}</p>
+          <button className="close-button" onClick={onClose}>×</button>
         </div>
         
         <div className="popup-content">
@@ -174,17 +173,8 @@ const ProjectCarousel = () => {
           centeredSlides={false}
           grabCursor={true}
           breakpoints={{
-            549: {
-              slidesPerView: 1,
-            },
-            600: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 2.5,
-            },
-            1440: {
-              slidesPerView: 3.3,
+            1294: {
+              slidesPerView: 2.3,
             },
             1920: {
               slidesPerView: 3,

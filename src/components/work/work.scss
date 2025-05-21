@@ -7,15 +7,24 @@
 
 .work-title {
   text-align: center;
-  font-size: 45px;
-  margin-left: 40px;
+  font-size: 40px;
   font-weight: 300;
+}
+
+@media (max-width: 500px) {
+  .work-title {
+    font-size: 32px;
+  } 
+}
+.vertical-timeline.vertical-timeline--two-columns {
+  max-width: 1300px;
 }
 
 .work {
 
   &__experience-card {
-    // Add styles specific to experience card if needed
+    // Adjust the content inside the card rather than the card itself
+    // This preserves the timeline positioning
   }
 
   &__image-container {
@@ -64,10 +73,12 @@
     list-style-type: disc;
     margin-left: 20px; // Adjusted for proper alignment
     padding: 0;
+    font-weight: 300;
 
     &-item {
       font-size: 16px;
       padding-left: 1px;
+      padding-bottom: 12px;
     }
   }
 }
