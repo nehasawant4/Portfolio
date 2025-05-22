@@ -54,6 +54,17 @@ section{
   z-index: 1;
 }
 
+#About {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    overflow: visible;
+  }
+}
+
 .app {
   position: relative;
   min-height: 100vh;

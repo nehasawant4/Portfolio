@@ -4,7 +4,6 @@ import About from "./components/about/About.jsx";
 import Work from "./components/work/Work.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import ProjectCarousel from "./components/projects/ProjectCarousel.jsx";
-import { useEffect } from "react";
 
 const App = () => {
     return(
