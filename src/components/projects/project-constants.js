@@ -3,7 +3,7 @@ import { captureOwnerStack } from "react";
 export const items = [
     {
         id:1,
-        title: 'Gitfluence - RAG',
+        title: 'GitFluence - RAG',
         tech: 'React · FastAPI · LangChain · OpenAI API · Pinecone',
         img:'RAG.png',
         desc:'In most organizations, Confluence is the backbone of internal documentation — from API guides and onboarding manuals to product specs and test plans. Developers, testers, and team members rely on it daily, yet finding the right information or understanding outdated docs is a major pain point.\n\nThis app transforms documentation into a queryable, intelligent assistant.\n\n🔍 Ask questions about platform usage, UI flows, or how to construct API payloads — the AI retrieves the exact context from Confluence or GitHub.\n\n🔧 Integrate GitHub repos to query codebases directly and understand internal APIs, handlers, or utils without reading every file.\n\n📑 Bridge the gap between code and docs — the AI detects undocumented features or mismatched Confluence pages and suggests content updates.\n\nBuilt for developer enablement, QA assistance, and living documentation, this tool doesn\'t just read your docs — it understands them, reasons with them, and keeps them in sync with your code.',
