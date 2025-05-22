@@ -1,7 +1,6 @@
 import './work.scss'
 import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
-import {motion} from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from './experiences';
 
@@ -50,8 +49,8 @@ const ExperienceCard = ({ experience }) => (
                 <li
                     key={`experience-point-${index}`}
                     className='work__list-item'
+                    dangerouslySetInnerHTML={{ __html: point }}
                 >
-                    {point}
                 </li>
             ))}
         </ul>
