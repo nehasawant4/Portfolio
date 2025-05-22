@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules";
 import "swiper/css";
 import { items } from "../projects/project-constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Specific content components for different project types
 const VideoContent = ({ videoUrl }) => (
@@ -148,17 +148,53 @@ const ProjectPopup = ({ project, onClose }) => {
 const ProjectCarousel = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Function to open a project popup and update URL hash
   const openPopup = (project) => {
     setSelectedProject(project);
     document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open
     document.body.classList.add('popup-open'); // Add class to hide navbar wrapper
+    
+    // Update URL hash without causing a page reload
+    window.history.pushState(null, null, `#project=${project.id}`);
   };
 
+  // Function to close popup and clear URL hash
   const closePopup = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'auto'; // Re-enable scrolling
     document.body.classList.remove('popup-open'); // Remove class to show navbar wrapper
+    
+    // Clear URL hash without causing a page reload
+    window.history.pushState(null, null, window.location.pathname);
   };
+  
+  // Check URL hash for direct project links on component mount and hash changes
+  useEffect(() => {
+    // Function to handle hash changes and direct links
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.includes('project=')) {
+        const projectId = parseInt(hash.split('=')[1]);
+        if (!isNaN(projectId)) {
+          const project = items.find(item => item.id === projectId);
+          if (project) {
+            openPopup(project);
+          }
+        }
+      }
+    };
+    
+    // Check hash on initial load
+    handleHashChange();
+    
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   return (
     <>
