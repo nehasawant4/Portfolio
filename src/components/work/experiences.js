@@ -9,7 +9,7 @@ export const experiences = [
         points: [
             "Graduating on 14th June 2025.",
             "Worked as a Research Assistant at the <a href='https://www.scu.edu/imaginarium/research/human-ai/' target='_blank' rel='noopener noreferrer'>Imaginarium lab</a> for Professor Dr. David Jeong.",
-            "Developed a research platform combining AI chatbots exhibiting distinct personalities, surveys, and a real-time Prisoner’s Dilemma game, where AI autonomously participates in gameplay."
+            "Developed a research platform combining AI chatbots exhibiting distinct personalities, surveys, and a real-time Prisoner’s Dilemma game, where AI autonomously participates in gameplay. <a href='https://human-ai.netlify.app/' target='_blank' rel='noopener noreferrer'>Link</a>"
         ],
     },
     {
