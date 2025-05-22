@@ -13,7 +13,7 @@ export const items = [
             { type: 'text', content: 'In most organizations, Confluence is the backbone of internal documentation — from API guides and onboarding manuals to product specs and test plans.' },
             { type: 'text', content: 'Developers, testers, and team members rely on it daily, yet finding the right information or understanding outdated docs is a major pain point.' },
             { type: 'text', content: 'This app transforms documentation and codebase into a queryable, intelligent assistant.' },
-            { type: 'image', src: 'rag-assist.png',},
+            { type: 'image', src: 'gitfluence.png',},
             { type:'text', content:'Confluence integration allows for real-time document ingestion and processing.'},
             { type: 'image', src: 'ingest_confluence.png',},
             { type:'text', content:'GitHub integration enables code context to be included in the knowledge base.'},
