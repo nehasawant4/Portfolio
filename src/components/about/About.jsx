@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, Fragment } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./about.scss";
 
 const About = () => {
@@ -83,6 +83,8 @@ const About = () => {
     useEffect(() => {
         let isTransitioning = false;
         let scrollTimeout = null;
+        let touchStartY = 0;
+        let touchEndY = 0;
         
         const handleWheel = (e) => {
             // If all slides have been viewed, allow normal scrolling
@@ -112,8 +114,18 @@ const About = () => {
             if (scrollTimeout) clearTimeout(scrollTimeout);
             
             // Determine scroll direction
-            if (e.deltaY > 0) {
-                // Scrolling down - go to next slide (sequentially)
+            changeSlide(e.deltaY > 0);
+            
+            // Allow next transition after delay
+            scrollTimeout = setTimeout(() => {
+                isTransitioning = false;
+            }, 1000); // Adjust this delay to control transition speed
+        };
+        
+        // Function to handle slide change based on direction
+        const changeSlide = (isNext) => {
+            if (isNext) {
+                // Going to next slide
                 setCurrentSlideIndex(prevIndex => {
                     // Always go to the next slide in sequence
                     const nextIndex = (prevIndex + 1) % slides.length;
@@ -129,7 +141,7 @@ const About = () => {
                     return nextIndex;
                 });
             } else {
-                // Scrolling up - go to previous slide (sequentially)
+                // Going to previous slide
                 setCurrentSlideIndex(prevIndex => {
                     // Go to previous slide, wrap around to the end if at first slide
                     const prevIdx = prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
@@ -140,21 +152,67 @@ const About = () => {
                     return prevIdx;
                 });
             }
+        };
+        
+        // Touch event handlers for mobile
+        const handleTouchStart = (e) => {
+            touchStartY = e.touches[0].clientY;
+        };
+        
+        const handleTouchMove = (e) => {
+            // If all slides have been viewed and swiping down, allow normal scrolling
+            if (allSlidesViewed && touchStartY > e.touches[0].clientY) {
+                return; // Allow normal scrolling
+            }
+            e.preventDefault(); // Prevent default scrolling behavior
+        };
+        
+        const handleTouchEnd = (e) => {
+            touchEndY = e.changedTouches[0].clientY;
+            
+            // Don't process touch events if we're already transitioning
+            if (isTransitioning) return;
+            
+            // Set minimum swipe distance threshold
+            const minSwipeDistance = 50;
+            const touchDiff = touchStartY - touchEndY;
+            
+            // Only trigger if the swipe distance is significant
+            if (Math.abs(touchDiff) < minSwipeDistance) return;
+            
+            // Set transitioning flag to prevent rapid changes
+            isTransitioning = true;
+            
+            // Clear any existing timeout
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            
+            // Determine swipe direction
+            changeSlide(touchDiff > 0); // If touchDiff > 0, swiped up (next slide)
             
             // Allow next transition after delay
             scrollTimeout = setTimeout(() => {
                 isTransitioning = false;
-            }, 1000); // Adjust this delay to control transition speed
+            }, 1000);
         };
         
         const aboutElement = aboutRef.current;
         if (aboutElement) {
+            // Add wheel event listener for desktop
             aboutElement.addEventListener('wheel', handleWheel, { passive: false });
+            
+            // Add touch event listeners for mobile
+            aboutElement.addEventListener('touchstart', handleTouchStart, { passive: true });
+            aboutElement.addEventListener('touchmove', handleTouchMove, { passive: false });
+            aboutElement.addEventListener('touchend', handleTouchEnd, { passive: true });
         }
         
         return () => {
             if (aboutElement) {
+                // Remove all event listeners on cleanup
                 aboutElement.removeEventListener('wheel', handleWheel);
+                aboutElement.removeEventListener('touchstart', handleTouchStart);
+                aboutElement.removeEventListener('touchmove', handleTouchMove);
+                aboutElement.removeEventListener('touchend', handleTouchEnd);
             }
             if (scrollTimeout) clearTimeout(scrollTimeout);
         };

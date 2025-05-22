@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 
     .slideContainer {
       height: 65%;
@@ -19,6 +20,7 @@
       justify-content: center;
       transition: opacity 0.5s ease;
       margin-bottom: 20px;
+      width: 100%;
 
       img, .text-slide {
         height: 100%;
@@ -77,6 +79,105 @@
   }
 }
 
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .about {
+    .wrapper {
+      .slideContainer {
+        height: 60%;
+        
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      
+      .text-slide {
+        max-width: 95%;
+        font-size: 18px;
+        padding: 1rem;
+        overflow-y: auto;
+        max-height: 100%;
+        
+        .technologies {
+          ul {
+            gap: 0.5rem;
+            
+            li {
+              padding: 0.4rem 0.8rem;
+              font-size: 16px;
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+      
+      .slideIndicator {
+        .indicator {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .about {
+    .wrapper {
+      padding: 0.5rem;
+      
+      .slideContainer {
+        height: 55%;
+      }
+      
+      .text-slide {
+        font-size: 16px;
+        padding: 0.75rem;
+        
+        .technologies {
+          p {
+            margin-bottom: 0.5rem;
+          }
+          
+          ul {
+            gap: 0.3rem;
+            
+            li {
+              padding: 0.3rem 0.6rem;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Handle touch devices */
+@media (hover: none) {
+  .about {
+    .wrapper {
+      .text-slide {
+        .technologies {
+          ul {
+            li {
+              &:active {
+                background-color: rgba(255, 255, 255, 0.2);
+              }
+              
+              &:hover {
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -85,4 +186,3 @@
     opacity: 1;
   }
 }
-
