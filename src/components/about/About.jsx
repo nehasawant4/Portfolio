@@ -6,10 +6,12 @@ const About = () => {
     const slides = [
         { type: "image", content: "/neha.png", alt: "Profile" },
         { type: "text", content: "Software Engineer with 3 years of experience in Cloud Computing, Automation, and Software Development." },
+        { type: "text", content: "I’m looking for full-time roles where I can turn coffee into code, bugs into features, and ideas into production." },
         { type: "text", content: (
             <div className="technologies">
                 <p>Whether it’s building from scratch or fixing what’s on fire, I speak these fluently:</p>
                 <ul>
+                    <li>Java</li>
                     <li>Python</li>
                     <li>APIs</li>
                     <li>React</li>
@@ -24,20 +26,8 @@ const About = () => {
                     <li>Shell</li>
                     <li>Perl</li>
                     <li>Flutter</li>
-                </ul>
-            </div>
-        ) },
-        { type: "text", content: (
-            <div className="technologies">
-                <p>Some niche domains I have worked in:</p>
-                <ul>
-                    <li>Apache CloudStack</li>
-                    <li>Jenkins</li>
-                    <li>Wireshark</li>
                     <li>Virtualization (KVM, VMware)</li>
                     <li>Cloud Networking</li>
-                    <li>Performance Testing</li>
-                    <li>Communications Based Train Control (CBTC) System</li>
                 </ul>
             </div>
         ) },
