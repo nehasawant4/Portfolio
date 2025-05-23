@@ -10,7 +10,7 @@ const App = () => {
         <div>
             <Navbar />
             <div className="scroll-wrapper">
-            <section id="About">
+            <section id="About" className="about">
                 <About />
             </section>
             <section id="Work">
