@@ -239,7 +239,7 @@ const About = () => {
                 // Going to previous slide
                 setCurrentSlideIndex(prevIndex => {
                     // Go to previous slide, wrap around to the end if at first slide
-                    const prevIdx = prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
+                    const prevIdx = prevIndex === 0 ? 0 : prevIndex - 1;
                     
                     // Add this slide to viewed set
                     viewedSlides.current.add(prevIdx);
