@@ -4,30 +4,120 @@ import "./about.scss";
 const About = () => {
     // Array of slides to display (both images and text)
     const slides = [
-        { type: "image", content: "/neha.png", alt: "Profile" },
-        { type: "text", content: "Software Engineer with 3 years of experience in Cloud Computing, Automation, and Software Development." },
+        //{ type: "image", content: "/neha.jpeg", alt: "Profile" },
+        { type: "image", content: "/IMG_14332.jpeg", alt: "Profile" },
+        { type: "text", content: <>
+            Software Engineer with 3 years of experience in Software Development, Cloud Computing, Automation, and DevOps.
+            <br/><br/>
+            Based in Santa Clara, CA — in the heart of Silicon Valley.
+        </> },
         { type: "text", content: "I’m looking for full-time roles where I can turn coffee into code, bugs into features, and ideas into production." },
         { type: "text", content: (
             <div className="technologies">
-                <p>Whether it’s building from scratch or fixing what’s on fire, I speak these fluently:</p>
+                <p>Whether it's building from scratch or fixing what's on fire, I speak these fluently:</p>
                 <ul>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>APIs</li>
-                    <li>React</li>
-                    <li>JavaScript</li>
-                    <li>Node.js</li>
-                    <li>CI/CD</li>
-                    <li>AWS</li>
-                    <li>GitLab</li>
-                    <li>Jenkins</li>
-                    <li>Kubernetes</li>
-                    <li>Linux</li>
-                    <li>Shell</li>
-                    <li>Perl</li>
-                    <li>Flutter</li>
-                    <li>Virtualization (KVM, VMware)</li>
-                    <li>Cloud Networking</li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/java.png" alt="Java" className="tech-icon"/>
+                            <span>Java</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/python.png" alt="Python" className="tech-icon"/>
+                            <span>Python</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/api.png" alt="APIs" className="tech-icon" />
+                            <span>APIs</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/react.png" alt="React" className="tech-icon" />
+                            <span>React</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/javascript.png" alt="JavaScript" className="tech-icon" />
+                            <span>JavaScript</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/node.png" alt="Node.js" className="tech-icon" />
+                            <span>Node.js</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/devops.png" alt="CI/CD" className="tech-icon" />
+                            <span>CI/CD</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/aws.png" alt="AWS" className="tech-icon" />
+                            <span>AWS</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/gitlab.png" alt="GitLab" className="tech-icon" />
+                            <span>GitLab</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/jenkins.png" alt="Jenkins" className="tech-icon" />
+                            <span>Jenkins</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/kubernetes.png" alt="Kubernetes" className="tech-icon" />
+                            <span>Kubernetes</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/linux.png" alt="Linux" className="tech-icon" />
+                            <span>Linux</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/shell.png" alt="Shell" className="tech-icon" />
+                            <span>Shell</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/perl.png" alt="Perl" className="tech-icon" />
+                            <span>Perl</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/flutter.png" alt="Flutter" className="tech-icon" />
+                            <span>Flutter</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/vmware.png" alt="Virtualization" className="tech-icon" />
+                            <span>Virtualization (KVM, VMware)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="tech-item">
+                            <img src="/icons/cloud.png" alt="Cloud Networking" className="tech-icon" />
+                            <span>Cloud Networking</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         ) },
@@ -223,12 +313,15 @@ const About = () => {
             <div className="wrapper">
                 <div className="slideContainer">
                     {slides[currentSlideIndex].type === "image" ? (
-                        <img 
-                            src={slides[currentSlideIndex].content} 
-                            alt={slides[currentSlideIndex].alt} 
-                            className="fade-in"
-                            key={`image-${currentSlideIndex}`} // Key helps with animation
-                        />
+                        <div className="image-container fade-in" key={`image-${currentSlideIndex}`}>
+                            <img 
+                                src={slides[currentSlideIndex].content} 
+                                alt={slides[currentSlideIndex].alt} 
+                            />
+                            {slides[currentSlideIndex].caption && (
+                                <div className="image-caption">{slides[currentSlideIndex].caption}</div>
+                            )}
+                        </div>
                     ) : (
                         <div 
                             className="text-slide fade-in"
