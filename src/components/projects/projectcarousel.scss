@@ -165,7 +165,7 @@ section {
   height: 90vh;
   background-color: white;
   border-radius: 20px;
-  overflow-y: hidden; /* Changed from auto to hidden */
+  overflow: hidden; /* Ensure the container doesn't scroll */
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   color: #333;
   animation: slideUp 0.4s ease;
@@ -226,7 +226,8 @@ section {
   flex: 1;
   gap: 30px; /* Added gap for better spacing */
   overflow-y: auto; /* Make only this section scrollable */
-  max-height: 100%; /* Adjust based on approximate header and footer heights */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  max-height: calc(90vh - 140px); /* Account for header and footer heights */
   
   .popup-image {
     width: 100%;
@@ -365,7 +366,7 @@ section {
 
 // Custom content styles
 .custom-content {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 30px;
