@@ -228,6 +228,11 @@ const About = () => {
                         setAllSlidesViewed(true);
                     }
                     
+                    // If this is the last slide, immediately scroll to the next section (Work)
+                    if (nextIndex === slides.length - 1) {
+                        document.getElementById('Work').scrollIntoView({ behavior: 'smooth' });
+                    }
+                    
                     return nextIndex;
                 });
             } else {
