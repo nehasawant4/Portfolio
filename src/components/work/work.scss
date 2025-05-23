@@ -13,7 +13,7 @@
 
 @media (max-width: 500px) {
   .work-title {
-    font-size: 32px;
+    font-size: 28px;
   } 
 }
 .vertical-timeline.vertical-timeline--two-columns {
@@ -62,6 +62,12 @@
   &__title {
     font-size: 24px;
     font-weight: 300;
+  }
+
+  @media (max-width: 500px) {
+    &__title {
+      font-size: 22px;
+    }
   }
 
   &__jobdesc {
