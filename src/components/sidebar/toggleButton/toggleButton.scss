@@ -5,3 +5,8 @@
       display: none; // Hide the toggle button on wider screens
   }
 }
+
+// Hide toggle button when project popup is open
+body.popup-open .toggleButton {
+  display: none;
+}

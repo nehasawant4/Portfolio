@@ -1,3 +1,4 @@
+
 .project-title {
   text-align: center;
   font-size: 40px;
@@ -6,7 +7,7 @@
 
 @media (max-width: 500px) {
   .project-title {
-    font-size: 32px;
+    font-size: 28px;
   } 
 }
 
@@ -74,6 +75,18 @@ section {
         opacity: 0.85;
       }
     }
+    
+    @media (max-width: 530px) {
+      .overlay {
+        .category {
+          font-size: 0.8rem;
+        }
+        
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
 
     .plus {
       position: absolute;
@@ -116,30 +129,18 @@ section {
   }
   @media (max-width: 530px) {
     .card {
-      height: 220px;
       width: 400px;
     } 
   }
   @media (max-width: 430px) {
     .card {
-      height: 180px;
+      height: 280px;
       width: 360px;
     } 
   }
 }
 // Responsive adjustments
 
-
-@media (max-width: 768px) {
-  .carousel-wrapper {
-    padding: 2rem 1rem;
-    
-    .card {
-      height: 400px;
-      min-width: 250px;
-    }
-  }
-}
 
 // Project Popup Styles
 .project-popup-overlay {

@@ -42,7 +42,7 @@ export const items = [
             { type: 'text', content: '⚙️ How It Works:\nDeveloped using Adobe Express SDK, the add-on analyzes canvas elements, takes user input, and sends context to a serverless OpenAI-powered API hosted on Vercel.' },
             { type: 'text', content: '✨ Key Features:' },
             { type: 'text', content: '• AI-generated alt-text to boost accessibility and SEO\n• Optimized headlines and meta descriptions\n• Keyword analysis from design text\n• General content and design improvement tips' },
-            { type: 'youtube', videoId: 'LvDOKdr98CI' },
+            { type: 'youtube', videoId: 'zumKu8PLFGs' },
             
         ]
     },    

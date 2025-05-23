@@ -45,13 +45,17 @@ a{
 }
 
 section{
-  padding-top: 60px;
+  padding-top: 50px;
   min-height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   overflow: hidden;
   position: relative;
   z-index: 1;
+}
+
+.projects{
+  padding-top: 0px;
 }
 
 #About {
