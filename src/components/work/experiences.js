@@ -20,10 +20,10 @@ export const experiences = [
         link: "https://www.f5.com/",
         date: "July 2024 - Sept 2024",
         points: [
-            "Built an AI-powered assistant for F5’s <a href='https://clouddocs.f5.com/bigip-next/latest/use_cm/' target='_blank' rel='noopener noreferrer'>Central Manager</a> using a custom RAG architecture enabling AI Ops, automated workflows, document validation, and developer assistance.",
-            "Developed frontend with React, TypeScript, and backend using Azure OpenAI, Postgres vector store, and FastAPIs.",
-            "Improved <a href='https://www.f5.com/products/big-ip-services/ssl-orchestrator' target='_blank' rel='noopener noreferrer'>BIG-IP SSL Orchestrator</a> forward proxy with JA4+ TLS fingerprinting by fixing TCL iRules in outbound gateway.",
-            "Set up BIG-IP SSL Orchestrator on AWS and conducted manual and automated tests using GitLab, REST client, Kubernetes, and Wireshark.",
+            "Built an AI assistant for F5’s <a href='https://clouddocs.f5.com/bigip-next/latest/use_cm/' target='_blank' rel='noopener noreferrer'>Central Manager</a> using a custom RAG architecture enabling AI Ops, automated workflows, document validation, and developer assistance.",
+            "Delivered a React, Typescript UI backed by FastAPI, Azure OpenAI, and Postgres vector store for the RAG pipeline.",
+            "Developed a proof of concept for to enhance <a href='https://www.f5.com/products/big-ip-services/ssl-orchestrator' target='_blank' rel='noopener noreferrer'>BIG-IP SSL Orchestrator</a> forward proxy by implementing JA4+ TLS fingerprinting using TCL iRules in the outbound gateway.",
+            "Validated bugs in SSL Orchestrator using the automation pipeline on AWS and GitLab, along with log analysis and manual testing using REST client, Kubernetes, and Wireshark.",
         ],
     },
     {
@@ -35,7 +35,6 @@ export const experiences = [
         date: "Sept 2023",
         points: [
             "Started my Masters in Computer Science at Santa Clara University.",
-            "Interesting coursework I studied: Design and Analysis of Algorithms, Distributed Systems, Advanced Operating Systems, Object-Oriented Analysis & Design",
             "Worked as a Grader for graduate courses Operating Systems and Computer Architecture."
         ],
     },
