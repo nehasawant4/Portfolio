@@ -13,7 +13,7 @@ const itemVariants= {
     },
 }
 
-const items = ["About", "Work", "Projects", "Resume", "Contact",];
+const items = ["About", "Work", "Projects", "Contact"];
 
 const Navbar = () => {
     return(
@@ -33,10 +33,9 @@ const Navbar = () => {
                 </motion.a>
                 <div className="info">
                     {items.map(item => {
-                        const href = item === "Resume" ? "/Resume.pdf" : `#${item}`;
                         return (
                             <motion.a
-                                href={href}
+                                href={`#${item}`}
                                 key={item}
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.1 }}

@@ -26,7 +26,7 @@ const itemVariants= {
     },
 }
 
-const items = ["About", "Work", "Projects", "Resume", "Contact",];
+const items = ["About", "Work", "Projects", "Contact"];
 
 const Links = ({ setOpen }) => {
     const handleLinkClick = () => {
@@ -36,10 +36,9 @@ const Links = ({ setOpen }) => {
     return(
         <motion.div className="links" variants={variants}>
             {items.map(item => {
-                const href = item === "Resume" ? "/Resume.pdf" : `#${item}`;
                 return (
                     <motion.a
-                        href={href}
+                        href={`#${item}`}
                         key={item}
                         variants={itemVariants}
                         whileHover={{ scale: 1.2 }}
