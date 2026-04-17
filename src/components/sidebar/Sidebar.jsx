@@ -5,22 +5,25 @@ import Links from "./Links/Links.jsx";
 import ToggleButton from "./toggleButton/ToggleButton.jsx";
 
 const variants = {
-    open:{
+    open: {
         clipPath: "circle(1200px at 50px 50px)",
+        opacity: 1,
+        pointerEvents: "auto",
         transition: {
             type: "spring",
             stiffness: 20,
         },
     },
-    closed:{
+    closed: {
         clipPath: "circle(0px at 0px 0px)",
-        transition:{
-            delay:0.5,
+        opacity: 0,
+        pointerEvents: "none",
+        transition: {
             type: "spring",
             stiffness: 400,
             damping: 40,
         },
-    }
+    },
 };
 
 const Sidebar = () => {
@@ -41,12 +44,17 @@ const Sidebar = () => {
         };
     }, [open]);
 
-    return(
-        <motion.div className="sidebar" animate={open ? "open" : "closed"} ref={sidebarRef}>
-            <motion.div className="bg" variants={variants}>
-                <Links setOpen={setOpen}/>
+    return (
+        <motion.div className="sidebar" ref={sidebarRef}>
+            <motion.div
+                className="bg"
+                variants={variants}
+                initial={false}
+                animate={open ? "open" : "closed"}
+            >
+                <Links setOpen={setOpen} />
             </motion.div>
-            <ToggleButton setOpen={setOpen}/>
+            <ToggleButton setOpen={setOpen} />
         </motion.div>
     );
 };
